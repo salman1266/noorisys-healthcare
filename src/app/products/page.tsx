@@ -31,7 +31,7 @@ export default function ProductsPage() {
 
       {/* Main Filterable Product Grid */}
       <ProductShowcase
-        title="Browse All 15 Innovations"
+        title="A Portfolio of Healthcare Innovations"
         subtitle="Filter by medical domain or search by specific feature or clinical capability."
         showFilters={true}
       />
