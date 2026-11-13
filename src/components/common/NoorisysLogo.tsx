@@ -27,10 +27,10 @@ export const NoorisysLogo: React.FC<LogoProps> = ({
           alt="Noorisys Technologies"
           className={`${
             isFooter
-              ? "h-11 sm:h-13 md:h-15 w-auto max-w-[260px] sm:max-w-[320px] md:max-w-[360px]"
+              ? "h-14 sm:h-16 md:h-20 lg:h-22 w-auto max-w-[320px] sm:max-w-[380px] md:max-w-[440px]"
               : isStandalone
-              ? "h-10 sm:h-12 md:h-13 w-auto max-w-[230px] sm:max-w-[270px] md:max-w-[300px]"
-              : "h-9 sm:h-10 md:h-11 w-auto max-w-[210px] sm:max-w-[250px] md:max-w-[280px]"
+              ? "h-12 sm:h-14 md:h-16 w-auto max-w-[280px] sm:max-w-[340px] md:max-w-[380px]"
+              : "h-12 sm:h-14 md:h-16 lg:h-18 w-auto max-w-[260px] sm:max-w-[320px] md:max-w-[380px] lg:max-w-[420px]"
           } object-contain`}
         />
       </div>
