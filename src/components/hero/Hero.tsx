@@ -1,0 +1,147 @@
+"use client";
+
+import React from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { ArrowRight, Sparkles } from "lucide-react";
+import { Hero3DWrapper } from "@/components/3d/Hero3DWrapper";
+
+export const Hero: React.FC = () => {
+  return (
+    <section id="hero" className="relative min-h-[92vh] pt-32 pb-20 flex items-center overflow-hidden bg-transparent">
+      {/* Background Volumetric Lighting */}
+      <div className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-[radial-gradient(circle,rgba(0,229,255,0.09)_0%,transparent_70%)] pointer-events-none blur-3xl" />
+      <div className="absolute top-1/3 right-10 w-[600px] h-[600px] bg-[radial-gradient(circle,rgba(18,205,181,0.08)_0%,transparent_70%)] pointer-events-none blur-3xl" />
+
+      {/* Subtle Coordinate Grid Lines */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:4.5rem_4.5rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_40%,#000_70%,transparent_100%)] pointer-events-none" />
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+          
+          {/* ========================================================= */}
+          {/* LEFT COLUMN: Headline, Description & Direct CTAs           */}
+          {/* ========================================================= */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            className="lg:col-span-5 flex flex-col justify-center text-left"
+          >
+            {/* Clean Category Label */}
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1, duration: 0.6 }}
+              className="inline-flex items-center gap-2 mb-6"
+            >
+              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0D1C2E] border border-white/10 text-xs font-mono font-medium text-[#00E5FF]">
+                <span className="h-1.5 w-1.5 rounded-full bg-[#00E5FF] animate-pulse" />
+                NOORISYS HEALTHCARE
+              </span>
+            </motion.div>
+
+            {/* Headline */}
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.7 }}
+              className="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.08] mb-6"
+            >
+              Healthcare,{" "}
+              <span className="bg-gradient-to-r from-[#00E5FF] via-[#12CDB5] to-[#FFFFFF] bg-clip-text text-transparent">
+                Connected by Intelligence.
+              </span>
+            </motion.h1>
+
+            {/* Description */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.7 }}
+              className="text-base sm:text-lg text-[#94A3B8] leading-relaxed max-w-xl mb-8"
+            >
+              A diverse portfolio of healthcare technology products designed to empower professionals, simplify operations and create better digital healthcare experiences.
+            </motion.p>
+
+            {/* Buttons: Explore Our Products & About Noorisys */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 0.7 }}
+              className="flex flex-wrap items-center gap-4 mb-10"
+            >
+              <Link
+                href="/#products"
+                className="group relative inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-gradient-to-r from-[#00E5FF] to-[#12CDB5] text-[#040810] text-sm font-bold shadow-[0_0_30px_rgba(0,229,255,0.35)] hover:shadow-[0_0_40px_rgba(0,229,255,0.55)] hover:scale-[1.02] transition-all duration-200"
+              >
+                <span>Explore Our Products</span>
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Link>
+
+              <Link
+                href="/#about"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-[#0D1C2E]/90 hover:bg-[#0D1C2E] text-white hover:text-[#00E5FF] text-sm font-semibold border border-white/10 hover:border-[#00E5FF]/40 transition-all duration-200"
+              >
+                <span>About Noorisys</span>
+              </Link>
+            </motion.div>
+
+            {/* Verified Portfolio Highlights */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5, duration: 0.8 }}
+              className="pt-6 border-t border-white/10 grid grid-cols-3 gap-4"
+            >
+              <div className="flex flex-col">
+                <div className="font-heading text-2xl lg:text-3xl font-extrabold text-white">
+                  15
+                </div>
+                <div className="text-xs text-[#94A3B8] mt-0.5">Healthcare Products</div>
+              </div>
+
+              <div className="flex flex-col">
+                <div className="font-heading text-2xl lg:text-3xl font-extrabold text-white">
+                  3
+                </div>
+                <div className="text-xs text-[#94A3B8] mt-0.5">Core Practice Areas</div>
+              </div>
+
+              <div className="flex flex-col">
+                <div className="font-heading text-2xl lg:text-3xl font-extrabold text-white">
+                  1
+                </div>
+                <div className="text-xs text-[#94A3B8] mt-0.5">Unified Portfolio</div>
+              </div>
+            </motion.div>
+          </motion.div>
+
+          {/* ========================================================= */}
+          {/* RIGHT COLUMN: Approved Concept A + C 3D Architectural Scene*/}
+          {/* ========================================================= */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.94 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.25, duration: 1, ease: [0.16, 1, 0.3, 1] }}
+            className="lg:col-span-7 relative"
+          >
+            {/* Architectural Frame with CAD Corner Crosshairs */}
+            <div className="cad-corner relative rounded-3xl p-1 bg-gradient-to-b from-[#00E5FF]/20 via-white/5 to-transparent shadow-[0_25px_60px_rgba(0,0,0,0.85),0_0_35px_rgba(0,229,255,0.12)]">
+              <Hero3DWrapper />
+            </div>
+
+            {/* Minimalist Subtitle Pill */}
+            <div className="absolute -bottom-4 left-6 hidden sm:flex items-center gap-2.5 px-4 py-2 rounded-2xl bg-[#0D1C2E]/90 border border-white/10 shadow-glass backdrop-blur-xl">
+              <Sparkles className="h-3.5 w-3.5 text-[#00E5FF]" />
+              <span className="text-xs text-[#94A3B8]">
+                Interactive 3D Ecosystem Architecture
+              </span>
+            </div>
+          </motion.div>
+
+        </div>
+      </div>
+    </section>
+  );
+};

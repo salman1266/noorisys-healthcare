@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" fill="none">
+    <rect width="64" height="64" x="8" y="8" rx="16" fill="#0D1C2E" stroke="#3B82F6" stroke-width="2"/>
+    <circle cx="40" cy="40" r="14" stroke="#3B82F6" stroke-width="3" fill="none"/>
+    <path d="M40 32v16M32 40h16" stroke="#00E5FF" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="49" cy="31" r="2.5" fill="#3B82F6"/>
+    <text x="86" y="38" fill="#FFFFFF" font-family="system-ui, sans-serif" font-weight="800" font-size="22" letter-spacing="1">WELZO</text>
+    <text x="86" y="56" fill="#3B82F6" font-family="monospace" font-weight="600" font-size="11" letter-spacing="1.5">AT-HOME DIAGNOSTICS</text>
+</svg>
